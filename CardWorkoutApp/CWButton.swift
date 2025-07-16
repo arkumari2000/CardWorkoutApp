@@ -23,7 +23,6 @@ class CWButton: UIButton {
         configure()
         self.backgroundColor = backgroundColor
         setTitle(title, for: .normal)
-        //self.titleLabel?.text = title
     }
     
     func configure() {
