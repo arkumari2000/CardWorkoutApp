@@ -10,9 +10,9 @@ import UIKit
 class CardsSelectionVC: UIViewController {
     
     let cardImageView = UIImageView()
-    let stopButton = CWButton(backgroundColor: .red, title: "Stop!")
-    let resetButton = CWButton(backgroundColor: .systemMint, title: "Replay")
-    let rulesButton = CWButton(backgroundColor: .blue, title: "Rules")
+    let stopButton = CWButton(backgroundColor: .red, title: "Stop!", systemImageName: "stop.circle")
+    let resetButton = CWButton(backgroundColor: .systemMint, title: "Replay", systemImageName: "arrow.clockwise.circle")
+    let rulesButton = CWButton(backgroundColor: .blue, title: "Rules", systemImageName: "list.bullet")
     
     let cards: [UIImage?] = CardDeck.allValues
     var timer: Timer!
