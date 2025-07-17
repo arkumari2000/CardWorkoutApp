@@ -10,6 +10,7 @@ import UIKit
 class CardsSelectionVC: UIViewController {
     
     let cardImageView = UIImageView()
+    let titleLabel = UILabel()
     let stopButton = CWButton(backgroundColor: .red, title: "Stop!", systemImageName: "stop.circle")
     let resetButton = CWButton(backgroundColor: .systemMint, title: "Replay", systemImageName: "arrow.clockwise.circle")
     let rulesButton = CWButton(backgroundColor: .blue, title: "Rules", systemImageName: "list.bullet")
@@ -53,10 +54,25 @@ class CardsSelectionVC: UIViewController {
     }
     
     func configureUI() {
+        configureTitleLabel()
         configureCardImageView()
         configureStopButton()
         configureResetButton()
         configureRulesButton()
+    }
+    
+    func configureTitleLabel() {
+        view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.text = "Cards Workout App"
+        titleLabel.font = .systemFont(ofSize: 30, weight: .heavy)
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = .darkGray
+        
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50)
+        ])
     }
     
     func configureCardImageView() {
